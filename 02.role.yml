@@ -1,0 +1,4 @@
+- name: Role Domo
+  hosts: all
+  roles:
+    - sample
