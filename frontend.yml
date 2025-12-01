@@ -13,5 +13,5 @@
   hosts: all
   tasks: Install nginx
   ansible.builtin.dnf:
-    - name: nginx
+      name: nginx
       state: latest
