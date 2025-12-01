@@ -4,4 +4,4 @@
 
 - name: Print a
   ansible.builtin.debug:
-  msg: {{ a }}
+  msg: "{{ a }}"
