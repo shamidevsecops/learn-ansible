@@ -8,7 +8,7 @@
       ansible.builtin.debug:
         msg: a - {{ a }}
     - name: Print Variable - task level
-      tasks:
+      vars:
         a: 200
       ansible.builtin.debug:
         msg: a - {{ a }}
