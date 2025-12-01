@@ -1,3 +1,7 @@
 - name: Print Hello
   ansible.builtin.debug:
     msg: Hello
+
+- name: Print a
+  ansible.builtin.debug:
+  msg: { { a } }

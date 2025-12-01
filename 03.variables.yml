@@ -1,8 +1,18 @@
+# variable precedence
+# cli level
+# task level
+# role level
+# play level
+# hosts_vars level
+# inventory level
+# group_vars level
 - name : Variable Demo
   hosts: localhost
   connection: local
   vars:
     a: 100
+  roles:
+    - sample
   tasks:
     - name : Print Variable
       ansible.builtin.debug:
