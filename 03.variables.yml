@@ -56,3 +56,17 @@
       ansible.builtin.debug:
         msg: "{{ out.stdout }}"
 
+- name: Variable Data Types
+  hosts: localhost
+  connection: local
+  vars:
+    my_string: abc
+    my_number: 123
+    my_boolean1: True # False is alternative , We can also use true,false
+    my_boolean2: Yes # No is alternative , yes,no
+  tasks:
+    - name: Print
+      ansible.builtin.debug:
+        msg: "string - {{ my_string }} number - {{ my_number }} boolean - {{ my_boolean1 }} "
+
+
