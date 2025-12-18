@@ -44,3 +44,15 @@
       ansible.builtin.debug:
         msg: ansible_architecture - {{ ansible_architecture }}
 
+- name: Register results
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Get uptime
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name:  Print out
+      ansible.builtin.debug:
+        msg: "{{ out.stdout }}"
+
