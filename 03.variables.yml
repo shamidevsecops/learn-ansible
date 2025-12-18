@@ -23,9 +23,10 @@
       ansible.builtin.debug:
         msg: a - {{ a }}
 
-    - name: Variable demo1
-      hosts: all
-      tasks:
-        - name: Variable from Inventory
-          ansible.builtin.debug:
-            msg: URL - {{ URL }}
+- name: Variable demo1
+  hosts: all
+  tasks:
+    - name: Variable from Inventory
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
