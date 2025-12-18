@@ -37,3 +37,10 @@
       ansible.builtin.debug:
         msg: URL1 - {{ URL1 }}
 
+- name: Facts demo1
+  hosts: all
+  tasks:
+    - name: Print a fact
+      ansible.builtin.debug:
+        msg: ansible_architecture - {{ ansible_architecture }}
+
