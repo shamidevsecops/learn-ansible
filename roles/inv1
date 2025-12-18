@@ -1,0 +1,7 @@
+    [PROD]
+    server1.shamidevops.online
+    server2.shamidevops.online
+
+    [UAT]
+    example1.shamidevops.online
+    example2.shamidevops.online
