@@ -1,0 +1,16 @@
+- name: Variable Types
+  hosts: localhost
+  connection: local
+  vars:
+    x: 100
+    my_boolean: true
+  tasks:
+    - name: Conditions
+      ansible.builtin.debug:
+        msg: Hello
+      when: x > 200
+
+    - name: Print Boolean
+      ansible.builtin.debug:
+        msg: Yess
+      when: my_boolean
