@@ -1,0 +1,13 @@
+- name: Error Handling
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Run a shell command
+      ansible.builtin.shell: grep admin /etc/passwd
+      register: out
+      ignore_errors: yes
+
+    - name: print
+      ansible.builtin.debug:
+        msg: "{{ out.stdout }}"
+
