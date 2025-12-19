@@ -1,0 +1,15 @@
+- name: Template Demo
+  hosts: localhost
+  connection: local
+  vars:
+    name: John
+  tasks:
+    #     - name: Copy a file
+    #       ansible.builtin.copy:
+    #         src: sample.txt
+    #         dest: /tmp/sample.txt
+
+    - name: Copy a file
+      ansible.builtin.template:
+        src: sample.txt
+        dest: /tmp/sample.txt
