@@ -1,0 +1,10 @@
+- name: Sample
+  hosts: all
+  tasks:
+    - name: Shell
+      ansible.builtin.shell: sleep 2
+
+# One node at a time
+#  git pull ; ansible-playbook -i inv3  -e ansible_user=ec2-user -e ansible_password=DevOps321 -f 1 08*
+# Ten nodes at a time
+#  git pull ; ansible-playbook -i inv3  -e ansible_user=ec2-user -e ansible_password=DevOps321 -f 10 08
