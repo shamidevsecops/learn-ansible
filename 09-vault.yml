@@ -14,3 +14,7 @@
     - name: Print Message
       ansible.builtin.debug:
         msg: "{{ Message }}"
+
+
+#ansible-playbook 09-vault.yml -J
+#ansible-playbook 09-vault.yml --vault-password-file /home/ec2-user/.vault
