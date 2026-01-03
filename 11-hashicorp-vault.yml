@@ -1,0 +1,11 @@
+- name: Vault demo
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Get value from vault
+      ansible.builtin.debug:
+        msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-dev/data/frontend token={{ token }} url=http://vault-internal.shamidevops.online:8200') }}"
+    - name: Copy using inline content
+      ansible.builtin.copy:
+        content: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-dev/data/frontend token={{ token }} url=http://vault-internal.shamidevops.online:8200') }}"
+        dest: /tmp/content.json
