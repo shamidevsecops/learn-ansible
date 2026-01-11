@@ -23,69 +23,69 @@
       ansible.builtin.debug:
         msg: a - {{ a }}
 
-- name: Variable demo1
-  hosts: all
-  tasks:
-    - name: Variable from Inventory
-      ansible.builtin.debug:
-        msg: URL - {{ URL }}
-
-- name: Variable demo2
-  hosts: all
-  tasks:
-    - name: Variable from Inventory vars
-      ansible.builtin.debug:
-        msg: URL1 - {{ URL1 }}
-
-- name: Facts demo1
-  hosts: all
-  tasks:
-    - name: Print a fact
-      ansible.builtin.debug:
-        msg: ansible_architecture - {{ ansible_architecture }}
-
-- name: Register results
-  hosts: localhost
-  connection: local
-  tasks:
-    - name: Get uptime
-      ansible.builtin.shell: uptime
-      register: out
-
-    - name:  Print out
-      ansible.builtin.debug:
-        msg: "{{ out.stdout }}"
-
-- name: Variable Data Types
-  hosts: localhost
-  connection: local
-  vars:
-    my_string: abc
-    my_number: 123
-    my_boolean1: True # False is alternative , We can also use true,false
-    my_boolean2: Yes # No is alternative , yes,no
-  tasks:
-    - name: Print
-      ansible.builtin.debug:
-        msg: "string - {{ my_string }} number - {{ my_number }} boolean - {{ my_boolean1 }} "
-
-- name: Variable Types
-  hosts: localhost
-  connection: local
-  vars:
-    my_default: value
-    my_list1: [ 1, 2 ,3]
-    my_list2:
-      - 1
-      - 2
-      - 3
-    my_map1: { some1: value1, some2: value2}
-    my_map2:
-      some1: value1
-      some2: value2
-  tasks:
-    - name: Print
-      ansible.builtin.debug:
-        msg: "First value in list - {{ my_list1[0] }} First Value in Map - {{ my_map2['some1'] }}"
-
-
+#- name: Variable demo1
+#  hosts: all
+#  tasks:
+#    - name: Variable from Inventory
+#      ansible.builtin.debug:
+#        msg: URL - {{ URL }}
+#
+#- name: Variable demo2
+#  hosts: all
+#  tasks:
+#    - name: Variable from Inventory vars
+#      ansible.builtin.debug:
+#        msg: URL1 - {{ URL1 }}
+#
+#- name: Facts demo1
+#  hosts: all
+#  tasks:
+#    - name: Print a fact
+#      ansible.builtin.debug:
+#        msg: ansible_architecture - {{ ansible_architecture }}
+#
+#- name: Register results
+#  hosts: localhost
+#  connection: local
+#  tasks:
+#    - name: Get uptime
+#      ansible.builtin.shell: uptime
+#      register: out
+#
+#    - name:  Print out
+#      ansible.builtin.debug:
+#        msg: "{{ out.stdout }}"
+#
+#- name: Variable Data Types
+#  hosts: localhost
+#  connection: local
+#  vars:
+#    my_string: abc
+#    my_number: 123
+#    my_boolean1: True # False is alternative , We can also use true,false
+#    my_boolean2: Yes # No is alternative , yes,no
+#  tasks:
+#    - name: Print
+#      ansible.builtin.debug:
+#        msg: "string - {{ my_string }} number - {{ my_number }} boolean - {{ my_boolean1 }} "
+#
+#- name: Variable Types
+#  hosts: localhost
+#  connection: local
+#  vars:
+#    my_default: value
+#    my_list1: [ 1, 2 ,3]
+#    my_list2:
+#      - 1
+#      - 2
+#      - 3
+#    my_map1: { some1: value1, some2: value2}
+#    my_map2:
+#      some1: value1
+#      some2: value2
+#  tasks:
+#    - name: Print
+#      ansible.builtin.debug:
+#        msg: "First value in list - {{ my_list1[0] }} First Value in Map - {{ my_map2['some1'] }}"
+#
+#
