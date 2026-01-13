@@ -1,3 +1,7 @@
+- name: Frontend
+  hosts: all
+  become: true
+
 - name: Disable nginx default version
   ansible.builtin.shell: dnf module disable nginx -y
 
