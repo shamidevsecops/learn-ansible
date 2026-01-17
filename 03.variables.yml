@@ -25,6 +25,7 @@
 
 - name: Variable demo1
   hosts: all
+  become: true
   tasks:
     - name: Variable from Inventory
       ansible.builtin.debug:
