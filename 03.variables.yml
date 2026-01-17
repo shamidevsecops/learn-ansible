@@ -13,10 +13,10 @@
     a: 100
   roles:
     - sample
-  tasks:
-    - name : Print Variable
-      ansible.builtin.debug:
-        msg: a - {{ a }}
+#  tasks:
+#    - name : Print Variable
+#      ansible.builtin.debug:
+#        msg: a - {{ a }}
 #    - name: Print Variable - task level
 #      vars:
 #        a: 200
