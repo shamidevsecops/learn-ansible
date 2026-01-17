@@ -17,11 +17,11 @@
     - name : Print Variable
       ansible.builtin.debug:
         msg: a - {{ a }}
-    - name: Print Variable - task level
-      vars:
-        a: 200
-      ansible.builtin.debug:
-        msg: a - {{ a }}
+#    - name: Print Variable - task level
+#      vars:
+#        a: 200
+#      ansible.builtin.debug:
+#        msg: a - {{ a }}
 
 #- name: Variable demo1
 #  hosts: all
