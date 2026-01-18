@@ -4,4 +4,5 @@
   tasks:
     - name: Get Values from Vault
       ansible.builtin.debug:
-        msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/demo:mypass token=hvs.GmrWuJQklxtQkrkN2CBwOWQN  url=http://172.31.17.228:8200') }}"
+        msg: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=kv/data/demo:mypass token={} url=http://172.31.17.228:8200') }}"
+
